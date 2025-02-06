@@ -8,11 +8,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common stuff.
+# Inherit some MistOS stuffs
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_EXCLUDES_AUDIOFX := true
+WITH_GMS := false
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
+MISTOS_MAINTAINER=sourceslab062_gitlab
+MIST_BUILD_TYPE := UNOFFICIAL
+TARGET_ENABLE_BLUR := true
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
@@ -25,6 +31,3 @@ PRODUCT_MODEL := Redmi 10C
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="fog_global-user 13 TKQ1.221114.001 V14.0.8.0.TGEMIXM release-keys" \
-    BuildFingerprint=Redmi/fog_global/fog:13/TKQ1.221114.001/V14.0.8.0.TGEMIXM:user/release-keys
