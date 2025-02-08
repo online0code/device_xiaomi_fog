@@ -33,7 +33,7 @@ bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 
 # Low memory killer daemon
-ro.lmk.kill_heaviest_task=true
+# error : found duplicate sysprop assignments: ro.lmk.kill_heaviest_task=true
 ro.lmk.thrashing_limit=50
 ro.lmk.thrashing_limit_decay=25
 ro.lmk.psi_complete_stall_ms=80
