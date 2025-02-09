@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/afterlife_fog.mk
+    $(LOCAL_DIR)/aosp_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    afterlife_fog-user \
-    afterlife_fog-userdebug \
-    afterlife_fog-eng
+    aosp_fog-user \
+    aosp_fog-userdebug \
+    aosp_fog-eng
