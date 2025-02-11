@@ -11,14 +11,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some MistOS stuffs
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_EXCLUDES_AUDIOFX := true
 WITH_GMS := false
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := false
 MISTOS_MAINTAINER=sourceslab062_gitlab
 MIST_BUILD_TYPE := UNOFFICIAL
-TARGET_ENABLE_BLUR := true
+TARGET_ENABLE_BLUR := false
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
