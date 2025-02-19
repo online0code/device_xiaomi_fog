@@ -25,7 +25,6 @@ dontaudit {
   hal_audio_default
   hal_graphics_composer_default
   hal_sensors_default
-  hal_bluetooth_default
   rild
   vendor_adpl
   vendor_cnd
@@ -35,6 +34,3 @@ dontaudit {
   vendor_netmgrd
   vendor_qti
 } vendor_diag_device:chr_file rw_file_perms;
-
-dontaudit hal_wifi_default kernel:system module_request;
-dontaudit hal_wifi_default self:capability sys_module;

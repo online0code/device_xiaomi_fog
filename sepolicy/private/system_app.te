@@ -1,8 +1,7 @@
-allow system_app installd:binder { call };
-allow system_app netd:binder { call };
-allow system_app storaged:binder { call };
-allow system_app system_data_file:dir { search };
-allow system_app system_suspend:binder { call };
-allow system_app system_suspend_control_service:service_manager { find };
-allow system_app unlabeled:dir { search };
-allow system_app vold:binder { call };
+dontaudit system_app {
+  system_suspend_control_internal_service
+  system_suspend_control_service
+  tracingproxy_service
+}:service_manager find;
+
+hal_client_domain(system_app, hal_mlipay)
