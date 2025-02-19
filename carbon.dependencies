@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "SourceLab081/sm6225-main",
+    "target_path": "kernel/xiaomi/fog"
+  },
+  {
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "revision": "lineage-19.0"
+  },
+  {
+    "repository": "LineageOS/android_vendor_qcom_opensource_fm-commonsys",
+    "target_path": "vendor/qcom/opensource/fm-commonsys",
+    "revision": "lineage-19.0"
+  }
+]

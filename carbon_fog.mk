@@ -8,11 +8,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-
 # Inherit common.
 $(call inherit-product, vendor/carbon/config/common.mk)
+
+TARGET_USE_GENERIC_WALLPAPER := true
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
