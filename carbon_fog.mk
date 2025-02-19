@@ -8,26 +8,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Komodo-OS stuff.
-$(call inherit-product, vendor/komodo/config/common.mk)
+# Inherit Carbon GSM telephony parts
+$(call inherit-product, vendor/carbon/config/gsm.mk)
+
+# Inherit common.
+$(call inherit-product, vendor/carbon/config/common.mk)
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-# Komodo Stuff
-KOMODO_OFFICIAL := false
-KOMODO_GAPPS_TYPE := gapps
-KOMODO_VARIANT := RELEASE
-
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_USES_BLUR := true
-TARGET_USES_AOSP_CHARGER := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_INCLUDE_STOCK_ARCORE := false
 
-PRODUCT_NAME := komodo_fog
+
+PRODUCT_NAME := carbon_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
