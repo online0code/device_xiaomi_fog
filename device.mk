@@ -420,7 +420,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Private Keys
-include vendor/arrow/signing/keys/keys.mk
+# include vendor/arrow/signing/keys/keys.mk
 
 # Sensors
 PRODUCT_PACKAGES += \
